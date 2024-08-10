@@ -28,6 +28,11 @@ mongoose.connect(
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
+// Display message on main route
+app.get("/", (req, res) => {
+  res.send("Nice to meet you");
+});
+
 // Routes for 'teacher' collection
 app.get("/teacher", (req, res) => {
   TeacherModel.find({})
